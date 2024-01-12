@@ -67,3 +67,33 @@ echo "FUNCTION CALL";
 echo "<br>";
 
 echo sum(100, 243);
+
+if (isset($_POST['submit'])) {
+    echo "<br>";
+    $name = $_POST['name'];
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <form action="" method="post">
+        <input type="text" name="name" required placeholder="Enter your name...">
+        <button name="submit" type="submit">Submit</button>
+        <br>
+        <br>
+        <?php echo $name ?>
+    </form>
+</body>
+
+</html>
